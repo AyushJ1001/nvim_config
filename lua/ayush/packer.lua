@@ -64,4 +64,7 @@ return require("packer").startup(function(use)
             { "nvim-treesitter/nvim-treesitter" }
         }
     }
+    use {
+        'laytan/tailwind-sorter.nvim',
+    }
 end)
