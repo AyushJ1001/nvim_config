@@ -67,4 +67,5 @@ return require("packer").startup(function(use)
 	use({
 		"laytan/tailwind-sorter.nvim",
 	})
+    use { "zbirenbaum/copilot.lua" }
 end)

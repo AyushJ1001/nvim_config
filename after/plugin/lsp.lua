@@ -11,12 +11,13 @@ lsp.ensure_installed({
 })
 
 
+
 lsp.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
   local opts = {buffer = bufnr, remap = false}
 
-  vim.keymap.set("i", "<C-Space>", cmp.mapping.confirm({select = true}), {silent = true, noremap = true, expr = true})
+  vim.keymap.set("i", "<C-Space>", cmp.mapping.confirm({select = true}))
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
   vim.keymap.set("n", "<leader>ws", function() vim.lsp.buf.workspace_symbol() end, opts)
